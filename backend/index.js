@@ -5,12 +5,11 @@ const path = require("path");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
 app.use(cors({
-  origin: 'https://college-placement-management-system-thv6.vercel.app/', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  origin: process.env.PORT || 'https://college-placement-management-system-thv6-qw349g6rn.vercel.app/',
+  credentials: true,
 }));
+
 
 // public folder for users profile
 app.use('/profileImgs', express.static(path.join(__dirname, 'public/profileImgs')));
