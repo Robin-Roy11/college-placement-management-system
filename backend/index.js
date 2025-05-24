@@ -6,6 +6,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(cors({
+  origin: 'https://college-placement-management-system-thv6.vercel.app/', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+}));
 
 // public folder for users profile
 app.use('/profileImgs', express.static(path.join(__dirname, 'public/profileImgs')));
