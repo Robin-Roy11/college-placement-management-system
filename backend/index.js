@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: process.env.PORT || 'https://college-placement-management-system-thv6-qw349g6rn.vercel.app/',
+  origin: process.env.PORT || 'https://6831bca7502a36c20d502036--mellifluous-puffpuff-1c25ff.netlify.app/',
   credentials: true,
 }));
 
